@@ -1,24 +1,18 @@
 pipeline {
-    agent any 
-
+    agent any
     stages {
         stage('Pull Code') {
             steps {
-                // Replace with your actual GitHub URL
-                git 'https://github.com/sairaj-patil050/jenkinsrep.git'
+                git branch: 'main', url: 'https://github.com/sairaj-patil050/jenkinsrep.git'
             }
         }
-        
         stage('Compile') {
             steps {
-                echo 'Compiling Java code...'
                 sh 'javac HelloWorld.java'
             }
         }
-        
         stage('Execute') {
             steps {
-                echo 'Running Java application...'
                 sh 'java HelloWorld'
             }
         }
