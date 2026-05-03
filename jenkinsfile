@@ -5,7 +5,7 @@ pipeline {
         stage('Pull Code') {
             steps {
                 // Replace with your actual GitHub URL
-                git 'https://github.com/sairaj-patil050/java-jenkins-test.git'
+                git 'https://github.com/sairaj-patil050/jenkinsrep.git'
             }
         }
         
